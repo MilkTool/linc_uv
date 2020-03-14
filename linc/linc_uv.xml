@@ -3,7 +3,7 @@
 	<!-- For a more in depth guide: https://github.com/snowkit/hxcpp-guide -->
 	<!-- References the original libuv build instructions: https://github.com/libuv/libuv/blob/v1.x/CMakeLists.txt -->
 	
-	<set name="UV" value="${LINC_UV_PATH}lib/libuv" />
+	<set name="UV" value="${LINC_LIBUV_SOURCE_ROOT}" />
 	
 	<files id="haxe">
 		<compilerflag value='-I${UV}'/>
@@ -17,8 +17,8 @@
 		<compilerflag value='-D_DARWIN_UNLIMITED_SELECT=1' if="macos" />
 		<compilerflag value='-D_GNU_SOURCE' if="linux" />
 
-		<compilerflag value='-I${LINC_UV_PATH}linc/'/>	
-		<file name='${LINC_UV_PATH}linc/linc_uv.cpp' />
+		<compilerflag value='-I${LINC_UV_PATH}/linc/'/>	
+		<file name='${LINC_UV_PATH}/linc/linc_uv.cpp' />
 	</files>
 
 	<files id="haxe">
